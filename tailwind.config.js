@@ -9,6 +9,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      publicsans: ["Public Sans"],
+    },
     extend: {},
   },
   plugins: [],
