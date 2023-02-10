@@ -26,20 +26,31 @@ const Navbar = ({ isHome }) => {
   };
 
   return (
-    <nav className="bg-transparent py-4">
+    <nav className="z-50 bg-transparent py-4">
       <div
-        className={`container mx-auto flex items-center justify-between px-6 lg:mb-0 ${
+        className={`container ml-auto flex justify-end lg:mb-0 ${
           isHome && !isOpen ? "mb-24" : ""
         }`}
       >
-        <div className="flex items-center">
+        <div className="flex items-center ">
+          {isMismatched && (
+            <button
+              className="mr-12 font-medium text-purple-400"
+              onClick={() => switchNetwork(ChainId.Mumbai)}
+            >
+              Switch To Mumbai
+            </button>
+          )}
+          <div className="z-50 rounded-xl bg-white lg:mt-0 lg:mr-2">
+            <ConnectWallet />
+          </div>
           <Link href="/" scroll={false}>
-            <div className="-mb-8 -mt-8 block">
+            <div className="mr-4 -mb-8 -mt-8 block">
               <img src="/logo.svg" alt="Logo" className="w-20" />
             </div>
           </Link>
         </div>
-        <div className="hidden items-center lg:flex">
+        {/* <div className="hidden items-center lg:flex">
           <Link href="/demo" className="mr-8 font-medium text-black">
             Demo
           </Link>
@@ -53,19 +64,8 @@ const Navbar = ({ isHome }) => {
           >
             Your Items
           </Link>
-          {isMismatched && (
-            <button
-              className="mr-12 font-medium text-purple-400"
-              onClick={() => switchNetwork(ChainId.Mumbai)}
-            >
-              Switch To Mumbai
-            </button>
-          )}
-          <div className="z-50 mt-4 rounded-xl bg-white lg:mt-0 lg:mr-20">
-            <ConnectWallet />
-          </div>
-        </div>
-        <div className="block lg:hidden">
+        </div> */}
+        {/* <div className="block lg:hidden">
           <button
             className="flex items-center rounded-full px-3 py-2 text-black"
             onClick={toggleMenu}
@@ -86,10 +86,10 @@ const Navbar = ({ isHome }) => {
               )}
             </svg>
           </button>
-        </div>
+        </div> */}
       </div>
 
-      <motion.nav animate={isOpen ? "open" : "closed"} variants={variants}>
+      {/* <motion.nav animate={isOpen ? "open" : "closed"} variants={variants}>
         {isOpen && (
           <div className="bg-transparent py-4">
             <div className="container mx-auto flex flex-col items-center px-6 lg:flex-row lg:justify-between">
@@ -129,7 +129,7 @@ const Navbar = ({ isHome }) => {
             </div>
           </div>
         )}
-      </motion.nav>
+      </motion.nav> */}
     </nav>
   );
 };
