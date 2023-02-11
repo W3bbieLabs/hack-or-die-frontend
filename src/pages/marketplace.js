@@ -6,6 +6,7 @@ import {
   useChainId,
   useOwnedNFTs,
 } from "@thirdweb-dev/react";
+import Link from "next/link";
 
 const Marketplace = () => {
   const address = useAddress();
@@ -37,7 +38,19 @@ const Marketplace = () => {
 
   return (
     <div className="relative -mt-24 flex h-full flex-col items-center justify-center">
-      <h1 className="mb-4 font-bold">Hack or Die - Bonus Character (Blu)</h1>
+      <h1 className="mb-2 font-bold">Bonus Character (Blu)</h1>
+      <Link
+        href="https://thirdweb.com/mumbai/0x0AF1A56D27c0f69025Abc6968002FEbED9b5f775?utm_source=contract_badge"
+        target="_blank"
+        className="mb-4"
+      >
+        <img
+          width="200"
+          height="45"
+          src="https://badges.thirdweb.com/contract?address=0x0AF1A56D27c0f69025Abc6968002FEbED9b5f775&theme=dark&chainId=80001"
+          alt="View contract"
+        />
+      </Link>
       <img src={metadata.image} className="mb-4 h-48 w-48 rounded-lg" />
       {address && chainId === 80001 && !isOwned && (
         <Web3Button
