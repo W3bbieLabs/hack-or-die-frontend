@@ -25,7 +25,7 @@ export default function Home() {
           </li>
           <li className="flex items-center justify-between border border-black p-3">
             <span className="">YOUR ITEMS</span>
-            <Link href={"/your-items"}>
+            <Link href={"/items"}>
               <img className="ml-16 h-6 w-6" src="/arrow_button.svg"></img>
             </Link>
           </li>
