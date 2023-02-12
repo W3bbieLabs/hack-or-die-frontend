@@ -13,7 +13,7 @@ export default function Home() {
         <ul className="mx-auto font-publicsans font-medium">
           <li className="flex items-center justify-between border border-b-0 border-black p-3">
             <span className="">DEMO</span>
-            <Link href={"http://w3bbie.xyz/unity/hackordie3/"} target="_blank">
+            <Link href={"http://w3bbie.xyz/hackordie/"} target="_blank">
               <img className="ml-16 h-6 w-6" src="/arrow_button.svg"></img>
             </Link>
           </li>
