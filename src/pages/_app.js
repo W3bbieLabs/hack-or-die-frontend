@@ -64,7 +64,7 @@ export default function App({ Component, pageProps }) {
         )}
 
         {!showVideo && (
-          <div className="absolute inset-0 h-full w-full bg-white" />
+          <div className="absolute inset-0 h-full w-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-100 to-gray-300" />
         )}
         <Component {...pageProps} />
         <div className="fixed bottom-0 mb-8 flex w-full justify-center p-4 font-publicsans font-medium text-black">
