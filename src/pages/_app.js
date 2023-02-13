@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Navbar from "@/components/Navbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Link from "next/link";
 
 const activeChainId = ChainId.Mumbai;
 
@@ -92,7 +93,16 @@ export default function App({ Component, pageProps }) {
             <span>Courtesy o</span>
             <span className="underline">f</span>
           </div>
-          <span className="underline">W3BBIE.</span>
+          <span className="underline">
+            <Link
+              href={
+                "https://violet-crown-74e.notion.site/W3BBIE-7a258cbe79014568b29ee4815e49af41/"
+              }
+              target="_blank"
+            >
+              W3BBIE.
+            </Link>
+          </span>
         </div>
       </div>
     </ThirdwebProvider>
