@@ -68,10 +68,10 @@ export default function App({ Component, pageProps }) {
           <div className="absolute inset-0 h-full w-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-100 to-gray-300" />
         )}
         <Component {...pageProps} />
-        <div className="fixed bottom-0 mb-8 flex w-full justify-center p-4 font-publicsans font-medium text-black">
+        <div className="fixed bottom-0 mb-8 ml-4 flex w-full flex-col items-center justify-center p-4 font-publicsans font-medium text-black lg:fixed lg:ml-0 lg:flex-row">
           <button
             onClick={toggleSound}
-            className="btn btn-primary mr-2 w-48 rounded-2xl border-2 border-black pt-3 pb-3"
+            className="btn btn-primary mr-2 mb-4 w-48 rounded-2xl border-2 border-black pt-3 pb-3 lg:mt-0 lg:mb-0"
           >
             TOGGLE SOUND
           </button>
@@ -85,7 +85,7 @@ export default function App({ Component, pageProps }) {
             TOGGLE ANIMATION
           </button>
         </div>
-        <div className="fixed bottom-0 left-4 mb-6 flex flex-col p-4 font-publicsans text-black">
+        <div className="fixed bottom-0 left-4 mb-6 mt-8 flex flex-col p-4 font-publicsans text-black lg:mt-0">
           <span className="mb-2 font-bold">@W3BBIE_XYZ</span>
           <span>Hack or Die</span>
           <span>Marketplace,</span>
